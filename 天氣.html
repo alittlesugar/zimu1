@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我們正談論著</title>
+  <link rel="stylesheet" href="style_tem.css">
+  <link rel="icon" href="black-cloud-rain-logotype.png" type="image/png">
+  <link rel="icon" href="圖標logo.png">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Talking About.</p>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#" class="link active" onclick="window.location.href='index.html'">主頁</a></li>
+                <li><a href="#" class="link" onclick="window.location.href='123.html'">部落格</a></li>
+                <li><a href="#" class="link" onclick="window.location.href='天氣.html'">天氣預報</a></li>
+                <li><a href="#" class="link" onclick="window.location.href='2048.html'">小遊戲</a></li>
+            </ul>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu"></i>
+        </div>
+    </nav>
+  <div class="card">
+  <div class="search">
+   <input type="text" class="city-input" placeholder="輸入國家名稱查看天氣(請用英文)" spellcheck="false">
+  <button>
+    <img src="5870.jpg" alt="items">
+  </button>
+  </div>
+  <div class="weather">
+    <img src="rainy.png" class="weather-icon">
+    <h1 class="temp">22°C</h1>
+    <h2 class="city">New York</h2>
+    <div class="details">
+      <div class="col">
+        <img src="precipitation_4005761.png">
+        <div>
+          <p class="humidity">50%</p>
+          <p>濕度</p>  
+        </div>  
+      </div>
+      <div class="col">    
+        <img src="windsock_1585612.png">
+        <div>
+          <p class="wind">15km/hr</p>
+          <p>風速</p>  
+        </div>  
+      </div>
+    </div>
+  </div> 
+</div> 
+<script>
+    place_array = ["turkey","taiwan","New york"]  
+    const apiKey = "79c3c3487d6d0e2bc7cdb60d0335ddc7";
+    const apiURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=";
+    document.querySelector('button').addEventListener('click', CheckWeather);
+    async function CheckWeather() {
+      const city = document.querySelector('.city-input').value || "New york"; 
+      const response = await fetch(`${apiURL}${city}&appid=${apiKey}`);
+      if (!response.ok) {
+        alert("City not found. Please try again.");
+        return;
+      }
+      const data = await response.json();
+      console.log(data);
+      // 更新天氣資料至HTML
+      document.querySelector(".city").innerHTML = data.name;
+      document.querySelector(".temp").innerHTML = `${data.main.temp}°C`;
+      document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
+      document.querySelector(".wind").innerHTML = `${data.wind.speed}km/hr`;
+    }
+    CheckWeather(); // 頁面加載時默認顯示一個城市的天氣
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>我們正談論著</title>
+    <link rel="icon" href="圖標logo.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Talking About.</p>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#" class="link active"onclick="window.location.href='index.html'">主頁</a></li>
+                    <li><a href="#" class="link" onclick="window.location.href='123.html'">部落格</a></li>
+                    <li><a href="#" class="link" onclick="window.location.href='天氣.html'">天氣預報</a></li>
+                    <li><a href="#" class="link" onclick="window.location.href='2048.html'">小遊戲</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginbtn">登入</button>
+                <button class="btn" id="registerbtn">註冊</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu"></i>
+            </div>
+        </nav>
+        <div class="form-box" id="form-box">
+            <div class="login-container" id="login">
+                <div class="top">
+                    <span>沒有帳號?<a href="#" onclick= "register()" id="switch-to-login">註冊</a></span>
+                </div>
+                
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="輸入email">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="輸入密碼">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="登入" onclick="window.location.href='123.html'">
+                     </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">記住我</label>
+                    </div>
+                    <div class="two">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check"><a href="#">忘記密碼?</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-box" id="form-box">
+            <div class="register-container" id="register">
+                <div class="top">
+                    <span>有帳號了?<a href="#" onclick= "login()" id="switch-to-login">登入</a></span>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="輸入姓氏，例如:林">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="輸入名字，例如:子目">
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="輸入email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="輸入密碼">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="註冊">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check-1">
+                        <label for="register-check-1">記住我</label>
+                    </div>
+                    <div class="two">
+                        <input type="checkbox" id="register-check-2">
+                        <label for="register-check"><a href="#">我已詳讀條款並同意條款的內容</a></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

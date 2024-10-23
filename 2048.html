@@ -1,0 +1,67 @@
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+                    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap' rel='stylesheet'>
+                    <link rel="stylesheet" href="style.css">
+                    <title>我們正談論著</title>
+                    <link rel="icon" href="圖標logo.png">
+                    <style>
+                        body {
+                            font-family: 'Poppins', sans-serif;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            margin: 0;
+                            background-color: #faf8ef;
+                        }
+
+                        .game-container {
+                            width: 400px;
+                            height: 400px;
+                            position: relative;
+                            background-color: #bbada0;
+                            border-radius: 10px;
+                            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                        }
+
+                        .tile {
+                            position: absolute;
+                            width: 90px;
+                            height: 90px;
+                            background-color: #eee4da;
+                            border-radius: 5px;
+                            font-size: 55px;
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #776e65;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="wrapper">
+                        <nav class="nav">
+                            <div class="nav-logo">
+                                <p>Talking About.</p>
+                            </div>
+                            <div class="nav-menu">
+                                <ul>
+                                    <li><a href="#" class="link active" onclick="window.location.href='index.html'">主頁</a></li>
+                                    <li><a href="#" class="link" onclick="window.location.href='123.html'">部落格</a></li>
+                                    <li><a href="#" class="link" onclick="window.location.href='天氣.html'">天氣預報</a></li>
+                                    <li><a href="#" class="link" onclick="window.location.href='2048.html'">小遊戲</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="game-container" id="game-container">
+                          
+                        </div>
+                    </div>
+                    <script src="2048.js"></script>
+                </body>
+                </html>
